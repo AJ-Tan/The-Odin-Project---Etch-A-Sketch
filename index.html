@@ -3,9 +3,101 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Etch-A-Sketch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <script type="module" src="index.js"></script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="header-container">
+        <i class="fa fa-pencil" style="transform: rotateY(180deg)"></i>
+        <h1>ETCH-A-SKETCH</h1>
+        <i class="fa fa-pencil"></i>
+      </div>
+    </header>
+    <main>
+      <section class="sketch">
+        <div class="sketch-controls">
+          <section class="sketch-buttons">
+            <button id="btn-change-grid" class="btn-control" type="button">
+              Change Grid
+            </button>
+            <button id="btn-reset" class="btn-control" type="button">
+              Reset
+            </button>
+          </section>
+
+          <section class="sketch-mode" data>
+            <span>Sketch Mode:</span>
+            <button
+              id="btn-mode"
+              class="btn-toggle"
+              data-sketch-mode="solid"
+              type="button"
+            >
+              Solid
+            </button>
+          </section>
+
+          <section class="sketch-selection" role="radiogroup">
+            <div id="selected-color" hidden></div>
+            <button
+              class="selection-color white"
+              data-color="white"
+              type="button"
+              role="radio"
+              aria-checked="true"
+            ></button>
+            <button
+              class="selection-color black"
+              data-color="black"
+              type="button"
+              role="radio"
+              aria-checked="false"
+            ></button>
+            <button
+              class="selection-color red"
+              data-color="red"
+              type="button"
+              role="radio"
+              aria-checked="false"
+            ></button>
+            <button
+              class="selection-color green"
+              data-color="green"
+              type="button"
+              role="radio"
+              aria-checked="false"
+            ></button>
+            <button
+              class="selection-color blue"
+              data-color="blue"
+              type="button"
+              role="radio"
+              aria-checked="false"
+            ></button>
+            <button
+              class="selection-color random"
+              data-color="random"
+              type="button"
+              role="radio"
+              aria-checked="false"
+            ></button>
+          </section>
+        </div>
+        <section class="sketch-container"></section>
+      </section>
+    </main>
+  </body>
 </html>
